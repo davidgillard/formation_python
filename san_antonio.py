@@ -14,12 +14,12 @@ def read_value_from_json():
         return values
 
 def read_key_from_json():
-    key = []
+    keys = []
     with open('quotes.json') as f:
         data = json.load(f)
         for entry in data:
-            values.append(entry['quote'])
-        return key
+            keys.append(entry['quote'])
+        return keys
 
 def get_random_item(my_list):
     rand_numb = random.randint(0, len(my_list) - 1)
@@ -31,8 +31,8 @@ def random_character():
     return get_random_item(all_values)
 
 def random_quote():
-    all_key = read_key_from_json()
-    return get_random_item(all_key)
+    all_keys = read_key_from_json()
+    return get_random_item(all_keys)
 
 def capitalize(words):
     for word in words:
