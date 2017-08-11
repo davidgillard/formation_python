@@ -2,3 +2,5 @@ ce fichier est un fichier txt de test
 
 
 Modification depuis github afin de tester la commande pull
+
+mais aussi depuis ma machine 
