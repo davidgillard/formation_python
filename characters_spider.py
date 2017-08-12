@@ -1,12 +1,10 @@
 import scrapy
 
+
 class BlogSpider(scrapy.Spider):
-    name = 'blogspider'
-    start_urls = ['https://blog.scrapinghub.com']
+    name = 'characterspider'
+    start_urls = ['https://fr.wikipedia.org/wiki/Cat%C3%A9gorie:Personnage_d\'animation']
 
-def parse(self, response):
-    for title in response.css('h2.entry-title'):
-        yield {'title': title.css('a ::text').extract_first()}
-
-        for next_page in response.css('div.prev-post > a'):
-            yield response.follow(next_page, self.parse)
+    def parse(self, response):
+        for link in response.css('div#mw-pages div.mw-content-ltr li'):
+            yield {'character': link.css('a ::text').extract_first()}
