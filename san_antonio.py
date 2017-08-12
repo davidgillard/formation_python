@@ -4,7 +4,7 @@ import random
 import json
 
 # Give a Json file and return a List
-def read_value_from_json(path, key):
+def read_values_from_json(path, key):
     values = []
     with open(path) as f:
         data = json.load(f)
@@ -21,7 +21,7 @@ def clean_strings(sentences):
         clean_sentence = sentence.strip()
         # Don't use extend as it adds each letter one by one!
         cleaned.append(clean_sentence)
-        return cleaned
+    return cleaned
 
 # Return a randon item in a list
 def random_item_in(object_list):
@@ -30,7 +30,7 @@ def random_item_in(object_list):
 
 # Return a random value from a json file
 def random_value(source_path, key):
-    all_values = read_value_from_json(source_path, key)
+    all_values = read_values_from_json(source_path, key)
     clean_values = clean_strings(all_values)
     return random_item_in(clean_values)
 
