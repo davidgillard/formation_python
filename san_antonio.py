@@ -1,7 +1,6 @@
 #_*_ coding:utf-8 _*_
-
-import random
 import json
+import random
 
 # Give a Json file and return a List
 def read_values_from_json(path, key):
@@ -50,7 +49,7 @@ def random_quote():
 # Gather quotes from wikipedia
 
 def random_character():
-    return random_value('characters.json','character')
+    return random_value('characters.json', 'character')
 
 ##############################
 ###### INTERACTION ###########
