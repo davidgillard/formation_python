@@ -6,3 +6,4 @@ je mets en application la formation git qui ma semble indispensable pour une per
 - san-antonio.py
 - characters.json
 - quotes.json
+- ajout d'une partie
